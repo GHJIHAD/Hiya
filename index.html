@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Hiya — My Wifey ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Dancing+Script:wght@600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="floating-elements"></div>
+
+    <!-- Welcome Overlay -->
+    <div id="welcome-screen" class="welcome-overlay">
+        <div class="welcome-card">
+            <span class="badge">Aug 21 • 88 Days Friends • 11 Days Together</span>
+            <h1>For My Wifey, Hiya</h1>
+            <p>From Instagram DMs to our very first date today—every frame here is dedicated to you.</p>
+            <button id="enter-btn" class="glow-btn">Enter Hiya's Album ✨</button>
+        </div>
+    </div>
+
+    <!-- Floating Music Pill -->
+    <div class="music-pill" id="music-toggle" title="Play / Pause Music">
+        <div class="equalizer" id="equalizer">
+            <span></span><span></span><span></span>
+        </div>
+        <span id="music-status">Play Music</span>
+    </div>
+
+    <!-- Reliable Audio + YouTube Fallback -->
+    <audio id="bg-audio" loop preload="auto">
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+    <div id="youtube-player"></div>
+
+    <!-- Hero -->
+    <header class="hero">
+        <p class="subtitle">SHAWON &bull; FOR HIYA</p>
+        <h1 class="main-title">Frames of Hiya</h1>
+        <p class="hero-desc">
+            Started talking on Instagram on <strong>August 21</strong> &bull; <strong>88 days</strong> of friendship &bull;
+            <strong>11 days</strong> of love &bull; <strong>First real-life date</strong> yesterday.
+        </p>
+    </header>
+
+    <!-- Stats Strip -->
+    <section class="stats-bar">
+        <div class="stat-box">
+            <span class="stat-num">Aug 21</span>
+            <span class="stat-label">Instagram Start</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-num">88 Days</span>
+            <span class="stat-label">Friendship</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-num">11 Days</span>
+            <span class="stat-label">Relationship</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-num">Day 01</span>
+            <span class="stat-label">First Real Date</span>
+        </div>
+    </section>
+
+    <!-- Hiya's Photo Album (JS will render lots of photos cleanly!) -->
+    <section class="gallery-section">
+        <h2 class="section-heading">My Favorite Muse — Hiya</h2>
+        <p class="section-sub">Click any photo to view full screen • Use arrow keys or click to browse</p>
+
+        <!-- Photos are loaded from script.js so you can add as many as you want -->
+        <div class="scrapbook-grid" id="photo-grid"></div>
+    </section>
+
+    <!-- Love Letter for Hiya -->
+    <section class="letter-section">
+        <h2 class="section-heading">A Letter For My Wifey</h2>
+        <p class="section-sub">Tap the wax seal to open</p>
+
+        <div class="envelope-wrapper" id="envelope-wrapper">
+            <div class="envelope" id="envelope">
+                <div class="flap"></div>
+                <div class="pocket"></div>
+                <div class="wax-seal" id="wax-seal">❤️</div>
+
+                <div class="letter-paper" id="letter-paper">
+                    <div class="letter-content">
+                        <p class="letter-date">Our First Date Day • 11 Days Together</p>
+                        <h3>My Dearest Hiya,</h3>
+
+                        <p>
+                            It all started back on August 21 on Instagram. Eighty-eight days of friendship slowly turned into something I never wanted to lose, and these past days together have felt so special.
+                        </p>
+                        <p>
+                            Today, finally meeting you for our first real-life date made everything feel even more real. Even though we don't have pictures together yet, my whole album is full of you—because every single photo of yours is a treasure to me.
+                        </p>
+                        <p>
+                            You're my wifey I love you so much my favorite notification, and my favorite person. Here's to countless more dates and memories ahead.
+                        </p>
+
+                        <p class="signature">Always yours,<br><span>Shawon</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox with Next/Prev -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox" id="close-lightbox">&times;</span>
+        <button class="nav-btn prev-btn" id="prev-photo">&#10094;</button>
+        <img id="lightbox-img" src="" alt="Hiya photo">
+        <button class="nav-btn next-btn" id="next-photo">&#10095;</button>
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <footer>
+        <p>Made with ❤️ by Shawon for Hiya</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
